@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Product",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier for the product."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the product."
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "string",
+          "description": "The year of the product."
+        },
+        "price": {
+          "type": "number",
+          "description": "The price of the product."
+        },
+        "CPU model": {
+          "type": "string",
+          "description": "The CPU model of the product."
+        },
+        "Hard disk size": {
+          "type": "string",
+          "description": "The size of the hard disk of the product."
+        }
+      },
+      "required": ["year", "price", "CPU model", "Hard disk size"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "name", "data"],
+  "additionalProperties": false
+}
